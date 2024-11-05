@@ -21,7 +21,7 @@ class temp:
     U_NAME = None
     B_NAME = None
 
-def circle(pfp, size=(500, 500)):
+def circle(pfp, size=(450, 450)):
     pfp = pfp.resize(size, Image.LANCZOS).convert("RGBA")
     bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
     mask = Image.new("L", bigsize, 0)
@@ -40,8 +40,8 @@ def welcomepic(pic, user, chat, id, uname):
         (500, 500)
     ) 
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype('assets/font.ttf', size=60)
-    font2 = ImageFont.truetype('assets/font.ttf', size=90)
+    font = ImageFont.truetype('assets/font.ttf', size=30)
+    font2 = ImageFont.truetype('assets/font.ttf', size=60)
     
     saffron = (255, 153, 51)  
     white = (255, 255, 255)   
@@ -60,7 +60,7 @@ def welcomepic(pic, user, chat, id, uname):
 
 @app.on_message(filters.command("welcome") & ~filters.private)
 async def auto_state(_, message):
-    usage = "**â– á´œsá´€É¢á´‡ âž¥** /swel [á´‡É´á´€Ê™ÊŸá´‡|á´…Éªsá´€Ê™ÊŸá´‡]"
+    usage = "**❖ ᴜsᴀɢᴇ ➥** /swel [ᴇɴᴀʙʟᴇ|ᴅɪsᴀʙʟᴇ]"
     if len(message.command) == 1:
         return await message.reply_text(usage)
     chat_id = message.chat.id
@@ -74,20 +74,20 @@ async def auto_state(_, message):
       state = state.lower()
       if state == "enable":
         if A:
-           return await message.reply_text("âœ¦ Special Welcome Already Enabled")
+           return await message.reply_text("✦ Special Welcome Already Enabled")
         elif not A:
            await add_wlcm(chat_id)
-           await message.reply_text(f"âœ¦ Enabled Special Welcome in {message.chat.title}")
+           await message.reply_text(f"✦ Enabled Special Welcome in {message.chat.title}")
       elif state == "disable":
         if not A:
-           return await message.reply_text("âœ¦ Special Welcome Already Disabled")
+           return await message.reply_text("✦ Special Welcome Already Disabled")
         elif A:
            await rm_wlcm(chat_id)
-           await message.reply_text(f"âœ¦ Disabled Special Welcome in {message.chat.title}")
+           await message.reply_text(f"✦ Disabled Special Welcome in {message.chat.title}")
       else:
         await message.reply_text(usage)
     else:
-        await message.reply("âœ¦ Only Admins Can Use This Command")
+        await message.reply("✦ Only Admins Can Use This Command")
  
 @app.on_chat_member_updated(filters.group, group=-3)
 async def greet_group(_, member: ChatMemberUpdated):
@@ -121,7 +121,7 @@ async def greet_group(_, member: ChatMemberUpdated):
             member.chat.id,
             photo=welcomeimg,
             caption= f"""
-  •●◉✿ ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ ✿◉●•
+ •●◉✿ ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ ✿◉●•
 ▰▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 
 ☉ ɴᴀᴍᴇ ➥  {user.mention}
@@ -133,9 +133,7 @@ async def greet_group(_, member: ChatMemberUpdated):
 """,
 reply_markup=InlineKeyboardMarkup(
 [
-[InlineKeyboardButton(f"❍ 𓆩 𝗦𝐓𝐘𝐋𝐈𝐒𝐇 ⌯ 𝗡𝐀𝐌𝐄 𓆪 ❍", url=f"https://t.me/TG_NAME_STYLE")
-[InlineKeyboardButton(f"❍ 𝐏𝐑𝐎𝐌𝐎𝐓𝐈𝐎𝐍 𝐀𝐕𝐀𝐈𝐋𝐀𝐁𝐋𝐄 ❍", url=f"https://t.me/TG_NAME_STYLE/4602"),
-]
+[InlineKeyboardButton(f"ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/{app.username}?startgroup=True"),
 ]
 ]
 ))
