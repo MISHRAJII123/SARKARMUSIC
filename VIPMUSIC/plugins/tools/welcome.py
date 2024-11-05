@@ -21,7 +21,7 @@ class temp:
     U_NAME = None
     B_NAME = None
 
-def circle(pfp, size=(450, 450)):
+def circle(pfp, size=(500, 500)):
     pfp = pfp.resize(size, Image.LANCZOS).convert("RGBA")
     bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
     mask = Image.new("L", bigsize, 0)
@@ -121,15 +121,15 @@ async def greet_group(_, member: ChatMemberUpdated):
             member.chat.id,
             photo=welcomeimg,
             caption= f"""
- â€¢â—â—‰âœ¿ á´¡á´‡ÊŸá´„á´á´á´‡ Ê™á´€Ê™Ê âœ¿â—‰â—â€¢
-â–°â–±â–±â–±â–±â–±â–±â–±â–±â–±â–±â–±â–±â–±â–°
+  •●◉✿ ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ ✿◉●•
+▰▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 
-â˜‰ É´á´€á´á´‡ âž¥  {user.mention}
-â˜‰ á´œsá´‡Ê€É´á´€á´á´‡ âž¥  @{user.username}
-â˜‰ á´œsá´‡Ê€ Éªá´… âž¥  {user.id}
-â˜‰ ð“á´á´›á´€ÊŸ ðŒá´‡á´Ê™á´‡Ê€s â§½ {count}**
-â˜‰ á´˜á´á´¡á´‡Ê€á´‡á´… Ê™Ê âž¥ à¹›[â¤ï¸â€ðŸ”¥ â€¢ ð›šð›ð›š â€¢ â¤ï¸â€ðŸ”¥ ](https://t.me/ll_SARKAR_MERA_BABU_ll)
-â–°â–±â–±â–±â–±â–±â–±â–±â–±â–±â–±â–±â–±â–±â–°
+☉ ɴᴀᴍᴇ ➥  {user.mention}
+☉ ᴜsᴇʀɴᴀᴍᴇ ➥  @{user.username}
+☉ ᴜsᴇʀ ɪᴅ ➥  {user.id}
+
+☉ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ๛[❤️‍🔥 • 𝛚𝛐𝛚 • ❤️‍🔥 ](https://t.me/ll_SARKAR_MERA_BABU_ll)
+▰▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 """,
 reply_markup=InlineKeyboardMarkup(
 [
