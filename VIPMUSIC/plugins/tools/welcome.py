@@ -84,7 +84,7 @@ class temp:
 
 
 
-def circle(pfp, size=(900, 900), brightness_factor=10):
+def circle(pfp, size=(500, 500), brightness_factor=10):
     pfp = pfp.resize(size, Image.ANTIALIAS).convert("RGBA")
     pfp = ImageEnhance.Brightness(pfp).enhance(brightness_factor)
     bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
@@ -104,7 +104,8 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('assets/font.ttf', size=110)
     welcome_font = ImageFont.truetype('assets/font.ttf', size=60)
-    pfp_position = (135, 130)
+    draw.text((2100, 1420), f'ID: {id}', fill=(12000, 12000, 12000), font=font)
+    pfp_position = (1990, 435)
     background.paste(pfp, pfp_position, pfp)
     background.save(f"downloads/welcome#{id}.png")
     return f"downloads/welcome#{id}.png"
@@ -170,10 +171,10 @@ async def greet_new_member(_, member: ChatMemberUpdated):
             welcomeimg = welcomepic(
                 pic, user.first_name, member.chat.title, user.id, user.username
             )
-            button_text = "❍ 𝐎ᴡɴᴇʀ ❍"
-            add_button_text = "❍ sᴜᴩᴩᴏʀᴛ ❍"
-            deep_link = f"https://t.me/Azad_parinda_0"
-            add_link = f"https://t.me/allsubjectpdf0"
+            button_text = "❍ 𓆩 𝗦𝐓𝐘𝐋𝐈𝐒𝐇 ⌯ 𝗡𝐀𝐌𝐄 𓆪 ❍"
+            add_button_text = "❍ 𝐏𝐑𝐎𝐌𝐎𝐓𝐈𝐎𝐍 𝐀𝐕𝐀𝐈𝐋𝐀𝐁𝐋𝐄 ❍"
+            deep_link = f"https://t.me/TG_NAME_STYLE"
+            add_link = f"https://t.me/TG_NAME_STYLE/4602"
             temp.MELCOW[f"welcome-{member.chat.id}"] = await app.send_photo(
                 member.chat.id,
                 photo=welcomeimg,
@@ -182,8 +183,7 @@ async def greet_new_member(_, member: ChatMemberUpdated):
 ❍ 𝐍ᴀᴍᴇ ➥  {user.mention}
 ❍ 𝐔sᴇʀɴᴀᴍᴇ ➥  @{user.username}
 ❍ 𝐔sᴇʀ 𝐈ᴅ ➥  {user.id}
-
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝐁ʏ ➥ ๛[❤️‍🔥 • 𝛚𝛐𝛚 • ❤️‍🔥](https://t.me/Azad_parinda_0)
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝐁ʏ ➥ ๛[❤️‍🔥 • 𝛚𝛐𝛚 • ❤️‍🔥](https://t.me/ll_SARKAR_MERA_BABU_ll)
 ╚════════════════.✵.═╝
 """,
                 reply_markup=InlineKeyboardMarkup([
