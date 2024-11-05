@@ -231,15 +231,7 @@ async def start_comm(client, message: Message, _):
         await vip.delete()
         vips = await message.reply_text("**𝐇𝐞𝐲 𝐁𝐚𝐛𝐲 ꨄ 𝐇𝐨𝐰 𝐀𝐫𝐞 𝐘𝐨𝐮⚡.....**")
         await asyncio.sleep(0.1)
-        await vips.edit_text("𝐁𝐨𝐭")
-        await asyncio.sleep(0.1)
-        await vips.edit_text("𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠 ")
-        await asyncio.sleep(0.1)
-        await vips.edit_text("𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠 ꨄ︎ ")
-        await asyncio.sleep(0.1)
-        await vips.edit_text("𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠 ꨄ︎ 𝐁𝐚𝐛𝐘")
-        await asyncio.sleep(0.1)
-        await vips.edit_text("𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠 ꨄ︎ 𝐁𝐚𝐛𝐲📍.")
+        await vips.edit_text("𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠 ꨄ︎ 𝐁𝐚𝐛𝐲🚩.")
         await asyncio.sleep(0.1)
 
         
