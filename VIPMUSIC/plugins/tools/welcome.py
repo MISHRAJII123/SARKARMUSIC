@@ -132,8 +132,10 @@ async def greet_group(_, member: ChatMemberUpdated):
 â–°â–±â–±â–±â–±â–±â–±â–±â–±â–±â–±â–±â–±â–±â–°
 """,
 reply_markup=InlineKeyboardMarkup(
-[InlineKeyboardButton(f"❍ 𓆩 𝗦𝐓𝐘𝐋𝐈𝐒𝐇 ⌯ 𝗡𝐀𝐌𝐄 𓆪 ❍", url=f"https://t.me/TG_NAME_STYLE"),
+[
+[InlineKeyboardButton(f"❍ 𓆩 𝗦𝐓𝐘𝐋𝐈𝐒𝐇 ⌯ 𝗡𝐀𝐌𝐄 𓆪 ❍", url=f"https://t.me/TG_NAME_STYLE")
 [InlineKeyboardButton(f"❍ 𝐏𝐑𝐎𝐌𝐎𝐓𝐈𝐎𝐍 𝐀𝐕𝐀𝐈𝐋𝐀𝐁𝐋𝐄 ❍", url=f"https://t.me/TG_NAME_STYLE/4602"),
+]
 ]
 ]
 ))
